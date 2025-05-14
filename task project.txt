@@ -1,0 +1,103 @@
+Pyspark
+
+1. Notebook => Always delete the existing data & fill the new mock data
+2. Notebook => Connect the DB read the table and operations, DB table ma store karvano.
+3. PowerBI => DB connect => Dahsboard
+
+1. Customer Overview Dashboard
+Goal: Understand customer demographics and their distribution.
+
+Visuals:
+✅ Card Visuals: Show key metrics like:
+
+Total Customers (COUNT(customer_id))
+
+Active Customers (COUNTIF(is_active = True))
+
+Inactive Customers (COUNTIF(is_active = False))
+
+✅ Donut Chart:
+
+Loyalty Status Distribution (Gold, Silver, Bronze)
+
+Fields: loyalty_status, COUNT(customer_id)
+
+✅ Line Chart:
+
+Customer Acquisition Over Time
+
+Fields: join_date, COUNT(customer_id)
+
+
+2. Financial Insights
+Goal: Visualize customer account balances and spending patterns.
+
+Visuals:
+✅ Bar Chart:
+
+Average Account Balance by Loyalty Status
+
+Fields: loyalty_status, AVG(account_balance)
+
+✅ Heatmap:
+
+Account Balance vs. Loyalty Points
+
+X-Axis: loyalty_points, Y-Axis: account_balance
+
+✅ Table Visual:
+
+Top 10 Customers by Account Balance
+
+Fields: name, account_balance, loyalty_status
+
+Use Sorting to show highest balance first.
+
+3. Customer Engagement Analysis
+Goal: Identify engagement trends and retention.
+
+Visuals:
+✅ Histogram:
+
+Account Age Distribution
+
+Fields: account_age_days
+
+Helps understand customer tenure.
+
+✅ Funnel Chart:
+
+Customer Retention Journey
+
+Stages: join_date → first_purchase → last_login → is_active
+
+✅ Line Chart:
+
+Last Login Trends
+
+Fields: last_login, COUNT(customer_id)
+
+4. Transaction & Activity Trends
+Goal: Analyze spending patterns and loyalty engagement.
+
+Visuals:
+✅ Area Chart:
+
+Monthly Loyalty Points Earned
+
+Fields: month(join_date), SUM(loyalty_points)
+
+✅ Treemap:
+
+Loyalty Points by Customer Segment
+
+Fields: loyalty_status, SUM(loyalty_points)
+
+✅ KPI Visuals:
+
+Total Loyalty Points Awarded
+
+Average Last Login Frequency
+
+Percentage of Customers with Balance > $X
+
